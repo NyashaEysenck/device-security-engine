@@ -1,0 +1,94 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Dark mode by default for cybersecurity theme */
+    --background: 0 0% 7%;
+    --foreground: 0 0% 88%;
+
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 88%;
+
+    --popover: 0 0% 7%;
+    --popover-foreground: 0 0% 88%;
+
+    --primary: 214 100% 59%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 217 10% 25%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 217 10% 20%;
+    --muted-foreground: 215 20% 70%;
+
+    --accent: 214 100% 59%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 5% 26%;
+    --input: 240 5% 26%;
+    --ring: 215 20% 65%;
+
+    --radius: 0.5rem;
+
+    /* Sidebar theme */
+    --sidebar-background: 0 0% 10%;
+    --sidebar-foreground: 214 100% 59%;
+    --sidebar-primary: 214 100% 59%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 214 100% 25%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 214 100% 15%;
+    --sidebar-ring: 214 100% 59%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-cyber-background text-cyber-foreground;
+  }
+
+  /* Technical terminal-style font for the cyber look */
+  html {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  }
+}
+
+@layer components {
+  .cyber-card {
+    @apply bg-cyber-card border border-cyber-border rounded-md p-4 shadow-lg;
+  }
+
+  .status-success {
+    @apply text-cyber-success;
+  }
+
+  .status-warning {
+    @apply text-cyber-warning;
+  }
+
+  .status-danger {
+    @apply text-cyber-danger;
+  }
+
+  .cyber-input {
+    @apply bg-cyber-background border border-cyber-border rounded px-3 py-2 focus:border-cyber-accent focus:outline-none;
+  }
+
+  .cyber-button {
+    @apply bg-cyber-accent text-white px-4 py-2 rounded hover:bg-opacity-80 transition-all;
+  }
+
+  .cyber-button-danger {
+    @apply bg-cyber-danger text-white px-4 py-2 rounded hover:bg-opacity-80 transition-all;
+  }
+}
