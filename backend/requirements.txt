@@ -1,7 +1,6 @@
 fastapi
 uvicorn
 python-dotenv
-pymongo
 scapy
 google-generativeai
 reportlab
@@ -10,6 +9,8 @@ python-jose
 passlib[bcrypt]
 bcrypt==4.0.1
 requests
-bson
 pydantic
 serial
+pymongo>=4.3.3
+motor>=3.1.0
+dnspython>=2.3.0
