@@ -1,4 +1,4 @@
-[providers]
+
 providers = ["python", "nodejs"]
 
 [phases.install]
